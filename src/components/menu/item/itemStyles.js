@@ -3,11 +3,14 @@ import { makeStyles } from "@material-ui/core/styles";
 export default makeStyles((theme) => ({
   root: {
     display: "flex",
-    maxWidth: "48%",
+    maxWidth: '47%',
     padding: "10px",
     height: "170px",
     marginBottom: "40px",
     boxShadow: "none",
+    [theme.breakpoints.down('sm')]: {
+      maxWidth: '100%'
+    }
   },
   details: {
     display: "flex",
