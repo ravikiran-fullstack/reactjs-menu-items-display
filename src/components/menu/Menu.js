@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-import useStyles from "./menuStyles";
 
 import Grid from "@material-ui/core/Grid";
 import data from "../../data";
@@ -9,7 +8,7 @@ import Category from "../category/Category";
 import Item from "./item/Item";
 
 const Menu = () => {
-  const classes = useStyles();
+
   const [menuItems, setMenuItems] = useState(data);
   const changeCategory = (category) => {
     if(category){
