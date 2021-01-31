@@ -18,7 +18,7 @@ export default makeStyles((theme) => ({
     padding: "0 2rem",
   },
   cover: {
-    border: "10px solid #c59d5f",
+    border: "5px solid #c59d5f",
     borderRadius: "10px",
     width: 151,
     height: "150px",

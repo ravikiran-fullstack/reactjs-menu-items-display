@@ -1,6 +1,5 @@
 import React from "react";
 
-import Category from "./components/category/Category";
 import Menu from "./components/menu/Menu";
 
 import data from "./data";
@@ -27,11 +26,6 @@ const App = () => {
               <Typography variant="h2">Our Menu</Typography>
               <div className={classes.underline}></div>
             </section>
-          </Grid>
-        </Grid>
-        <Grid container alignItems="center" justify="center">
-          <Grid item xs={12}>
-            <Category></Category>
           </Grid>
         </Grid>
         <Grid container alignItems="center" justify="center">

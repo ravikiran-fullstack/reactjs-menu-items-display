@@ -8,8 +8,6 @@ import useStyles from "./itemStyles";
 
 const Item = (item) => {
   const classes = useStyles();
-  const [theme, setTheme] = React.useState({ direction: false });
-  console.log(item);
   return (
     <Card className={classes.root}>
       <div className={classes.image}>

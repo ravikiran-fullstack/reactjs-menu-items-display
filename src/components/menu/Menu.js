@@ -1,23 +1,48 @@
-import React from "react";
+import React, {useState} from "react";
 import useStyles from "./menuStyles";
+
+import Grid from "@material-ui/core/Grid";
+import data from "../../data";
+
+import Category from "../category/Category";
 
 import Item from "./item/Item";
 
-const Menu = ({ menuItems }) => {
+const Menu = () => {
   const classes = useStyles();
+  const [menuItems, setMenuItems] = useState(data);
+  const changeCategory = (category) => {
+    if(category){
+      setMenuItems(
+        data.filter(item => item.category === category)
+      )
+    } else {
+      setMenuItems(data)
+    }
+    
+  }
   return (
     <>
-      <div
-        style={{
-          display: "flex",
-          flexWrap: "wrap",
-          justifyContent: "space-between",
-        }}
-      >
-        {menuItems.map((item) => {
-          return <Item key={item.id} {...item}></Item>;
-        })}
-      </div>
+      <Grid container alignItems="center" justify="center">
+        <Grid item xs={12}>
+          <Category changeCategory ={changeCategory}></Category>
+        </Grid>
+      </Grid>
+      <Grid container alignItems="center" justify="center">
+        <Grid item xs={12}>
+          <div
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              justifyContent: "space-between",
+            }}
+          >
+            {menuItems.map((item) => {
+              return <Item key={item.id} {...item}></Item>;
+            })}
+          </div>
+        </Grid>
+      </Grid>
     </>
   );
 };
