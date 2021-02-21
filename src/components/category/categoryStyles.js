@@ -5,11 +5,13 @@ export default makeStyles((theme) => ({
     display: "flex",
     flexWrap: "wrap",
     justifyContent: "center",
-    marginBottom: "20px",
+    marginBottom: "20px"
   },
   btn: {
+    textTransform:'capitalize',
     marginRight: "5%",
     color: "#c59d5f",
+    border: '2px solid #c59d5f',
     "&:hover, &:focus": {
       backgroundColor: ({ hoverBackgroundColor = "#c59d5f", backgroundColor ="white" }) => hoverBackgroundColor ? hoverBackgroundColor : backgroundColor,
       color: ({hoverColor ="white", color = "#c59d5f"}) => hoverColor ? hoverColor : color,
